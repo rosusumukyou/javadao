@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- <project>：文件的顶级元素 -->
+	<!-- <modelVersion>: 所使用的object model版本，为了确保稳定的使用，这个元素是强制性的。除非maven开发者升级模板，否则不需要修改 -->
+	<!-- <groupId>: 是项目创建团体或组织的唯一标志符，通常是域名倒写，如groupId org.apache.maven.plugins就是为所有maven插件预留的 -->
+	<!-- <artifactId>: 是项目artifact唯一的基地址名 -->
+	<!-- <packaging>: artifact打包的方式，如jar、war、ear等等。默认为jar。这个不仅表示项目最终产生何种后缀的文件，也表示build过程使用什么样的<a 
+		target="_blank" href="http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Built-in_Lifecycle_Bindings">lifecycle</a>。 -->
+	<!-- <version>: artifact的版本，通常能看见为类似0.0.1-SNAPSHOT，其中SNAPSHOT表示项目开发中，为开发版本 -->
+	<!-- <name>:表示项目的展现名，在maven生成的文档中使用 -->
+	<!-- <url>:表示项目的地址，在maven生成的文档中使用 -->
+	<!-- <description>: 表示项目的描述，在maven生成的文档中使用 -->
+	<!-- <dependencies>: 表示依赖，在子节点dependencies中添加具体依赖的groupId artifactId和version -->
+	<!-- <build> 表示build配置 -->
+	<!-- <properties>:表示相应的配置属性（尤其是多次使用的dependencies中的version），如上面的pom 所示 -->
+	<!-- <profiles>:maven能够自动适应外部的环境变化，比如Linux，window， -->
+	<!-- <modules>：module是指具体子模块的目录名，而不是子工程的artifactId -->
+	<!-- parent 表示父pom -->
+	<!-- <scope>:范围依赖（compile，test，runtime,provided,system）参考http://blog.csdn.net/cd18333612683/article/details/66478332 -->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cn.mldn</groupId>
+	<artifactId>javadao</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>daotest</name>
+
+	<description>aaaaaaaaaaaaaa</description>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc14 -->
+	</dependencies>
+</project>

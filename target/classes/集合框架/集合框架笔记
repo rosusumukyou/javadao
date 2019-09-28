@@ -1,0 +1,4 @@
+collection<interface>
+容许重复的list<interface>
+arraylist,linklist,vector
+不容许重复的set
